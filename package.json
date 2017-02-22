@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/nickolasclarke/openaq/issues"
   },
-  "homepage": "https://github.com/nickolasclarke/openaq#readme"
+  "homepage": "https://github.com/nickolasclarke/openaq#readme",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
 }
