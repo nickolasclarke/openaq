@@ -1,4 +1,3 @@
-//const babel = require('babel')
 const fetch = require('isomorphic-fetch')
 
 const url = '//api.openaq.org'
@@ -21,45 +20,44 @@ const get = (endpoint, options) => {
         })
 }
 
-// requires babel first export default class OpenAQ {
 class OpenAQ {
     cities(options) {
-        if (options) return get('/v1/cities/' + options)
+        if (options) return get('/v1/cities/?' + options)
         return get('/v1/cities/')
     }
 
     countries(options) {
-        if (options) return get('/v1/countries/' + options)
+        if (options) return get('/v1/countries/?' + options)
         return get('/v1/countries/')
     }
 
     fetches(options) {
-        if (options) return get('/v1/fetches/' + options)
+        if (options) return get('/v1/fetches/?' + options)
         return get('/v1/fetches/')      
     }
 
     latest(options) {
-        if (options) return get('/v1/latest/' + options)
+        if (options) return get('/v1/latest/?' + options)
         return get('/v1/latest/')
     }
 
     locations(options){
-        if (options) return get('/v1/locations/' + options)
+        if (options) return get('/v1/locations/?' + options)
         return get('/v1/locations/')
     }
 
     measurements(options){
-        if (options) return get('/v1/measurements/' + options)
+        if (options) return get('/v1/measurements/?' + options)
         return get('/v1/measurements/')
     }
 
-    params(){
-        if (options) return get('/v1/params/' + options)
-        return get('/v1/params/')
+    parameters(){
+        return get('/v1/parameters/')
     }
 
     sources(options){
-        if (options) return get('/v1/sources/' + options)
+        if (options) return get('/v1/sources/?' + options)
         return get('/v1/sources/')
     }
 }
+module.exports = OpenAQ
