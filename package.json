@@ -1,0 +1,29 @@
+{
+  "name": "openaq",
+  "version": "0.0.1",
+  "description": "A JS client for the OpenAQ API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickolasclarke/openaq.git"
+  },
+  "keywords": [
+    "openAQ",
+    "air",
+    "quality",
+    "AQ",
+    "AQI"
+  ],
+  "author": "Nick Clarke <nickolasclarke@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickolasclarke/openaq/issues"
+  },
+  "homepage": "https://github.com/nickolasclarke/openaq#readme",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
