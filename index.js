@@ -1,8 +1,8 @@
 const fetch = require('isomorphic-fetch')
 
 const url = '//api.openaq.org'
-const get = (endpoint, options) => {
-    if (!options) {
+const get = (endpoint, params) => {
+    if (!params) {
         return fetch(url + endpoint)
         .then(response => {
             if (response.status >= 400) {
@@ -11,7 +11,7 @@ const get = (endpoint, options) => {
             return response.json()
         })
     }
-    return fetch(url + endpoint + options)
+    return fetch(url + endpoint + params)
         .then(response => {
             if (response.status >= 400) {
                 throw new Error("Bad response from server")
@@ -21,33 +21,33 @@ const get = (endpoint, options) => {
 }
 
 class OpenAQ {
-    cities(options) {
-        if (options) return get('/v1/cities/?' + options)
+    cities(params) {
+        if (params) return get('/v1/cities/?' + params)
         return get('/v1/cities/')
     }
 
-    countries(options) {
-        if (options) return get('/v1/countries/?' + options)
+    countries(params) {
+        if (params) return get('/v1/countries/?' + params)
         return get('/v1/countries/')
     }
 
-    fetches(options) {
-        if (options) return get('/v1/fetches/?' + options)
+    fetches(params) {
+        if (params) return get('/v1/fetches/?' + params)
         return get('/v1/fetches/')      
     }
 
-    latest(options) {
-        if (options) return get('/v1/latest/?' + options)
+    latest(params) {
+        if (params) return get('/v1/latest/?' + params)
         return get('/v1/latest/')
     }
 
-    locations(options){
-        if (options) return get('/v1/locations/?' + options)
+    locations(params){
+        if (params) return get('/v1/locations/?' + params)
         return get('/v1/locations/')
     }
 
-    measurements(options){
-        if (options) return get('/v1/measurements/?' + options)
+    measurements(params){
+        if (params) return get('/v1/measurements/?' + params)
         return get('/v1/measurements/')
     }
 
@@ -55,8 +55,8 @@ class OpenAQ {
         return get('/v1/parameters/')
     }
 
-    sources(options){
-        if (options) return get('/v1/sources/?' + options)
+    sources(params){
+        if (params) return get('/v1/sources/?' + params)
         return get('/v1/sources/')
     }
 }
