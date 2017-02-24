@@ -11,7 +11,7 @@ const client = new openaq
 ```
 
 ## API:
-### .getCities(options)
+### .getCities(params)
 - example:
 ```javascript
 cities().then(results => {
@@ -24,7 +24,7 @@ cities('country=US&page=2').then(results => {
 })
 ```
 
-### .countries(options)
+### .countries(params)
 - example:
 ```javascript
 countries().then(results => {
@@ -36,7 +36,7 @@ countries('limit=10&page=2').then(results => {
   //results here
 })
 ```
-### .fetches(options)
+### .fetches(params)
 - example:
 ```javascript
 fetches().then(results = {
@@ -49,7 +49,7 @@ fetches('limit=10&page=2').then(results => {
 })
 ```
 
-### .latest(options)
+### .latest(params)
 - example:
 ```javascript
 latest().then(results => {
@@ -62,7 +62,7 @@ latest('location=Bowling%20Green&parameter=o3').then(results => {
 })
 ```
 
-### .locations(options)
+### .locations(params)
 - example:
 ```javascript
 locations().then(results => {
@@ -75,7 +75,7 @@ locations('location=Bowling%20Green&parameter=o3').then(results => {
 })
 ```
 
-### .measurements(options)
+### .measurements(params)
 - example:
 ```javascript
 measurements().then(results => {
@@ -96,7 +96,7 @@ parameters().then(results => {
 })
 ```
 
-### .sources(options)
+### .sources(params)
 - example:
 ```javascript
 
@@ -111,5 +111,5 @@ sources('limit=10&page=2').then(results => {
 ```
 ##TODO
 - add testing
-- improved `options` handling
+- improved `params` handling
 - make isomorphic (commonJS and ES2015 module support)
