@@ -11,7 +11,9 @@ const client = new openaq
 ```
 
 ## API:
-### .getCities(params)
+Methods for all endpoints have been implemented. All parameters, if any, for each endpoint are supported as a single URL encoded argument, as seen in the examples.
+
+### [.getCities(params)](https://docs.openaq.org/#api-Cities)
 - example:
 ```javascript
 cities().then(results => {
@@ -24,7 +26,7 @@ cities('country=US&page=2').then(results => {
 })
 ```
 
-### .countries(params)
+### [.countries(params)](https://docs.openaq.org/#api-Countries)
 - example:
 ```javascript
 countries().then(results => {
@@ -36,7 +38,7 @@ countries('limit=10&page=2').then(results => {
   //results here
 })
 ```
-### .fetches(params)
+### [.fetches(params)](https://docs.openaq.org/#api-Fetches)
 - example:
 ```javascript
 fetches().then(results = {
@@ -49,7 +51,7 @@ fetches('limit=10&page=2').then(results => {
 })
 ```
 
-### .latest(params)
+### [.latest(params)](https://docs.openaq.org/#api-Latest)
 - example:
 ```javascript
 latest().then(results => {
@@ -62,7 +64,7 @@ latest('location=Bowling%20Green&parameter=o3').then(results => {
 })
 ```
 
-### .locations(params)
+### [.locations(params)](https://docs.openaq.org/#api-Locations)
 - example:
 ```javascript
 locations().then(results => {
@@ -75,7 +77,7 @@ locations('location=Bowling%20Green&parameter=o3').then(results => {
 })
 ```
 
-### .measurements(params)
+### [.measurements(params)](https://docs.openaq.org/#api-Measurements)
 - example:
 ```javascript
 measurements().then(results => {
@@ -88,7 +90,7 @@ measurements('location=Bowling%20Green&parameter=o3').then(results => {
 })
 ```
 
-### .parameters()
+### [.parameters()](https://docs.openaq.org/#api-Parameters)
 - example:
 ```javascript
 parameters().then(results => {
@@ -96,7 +98,7 @@ parameters().then(results => {
 })
 ```
 
-### .sources(params)
+### [.sources(params)](https://docs.openaq.org/#api-Sources)
 - example:
 ```javascript
 
@@ -109,7 +111,7 @@ sources('limit=10&page=2').then(results => {
   //results here
 })
 ```
-##TODO
+## TODO
 - add testing
 - improved `params` handling
 - make isomorphic (commonJS and ES2015 module support)
