@@ -27,9 +27,7 @@ const get = (endpoint, params) => {
 
 class OpenAQ {
     cities(params) {
-        if (params) {
-            return get('/v1/cities/?' + buildQueryString(params))
-        }
+        if (params) return get('/v1/cities/?' + buildQueryString(params))
         return get('/v1/cities/')
     }
 
