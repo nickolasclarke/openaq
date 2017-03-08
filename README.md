@@ -11,7 +11,7 @@ const client = new openaq
 ```
 
 ## API:
-Methods for all endpoints have been implemented. All parameters, if any, for each endpoint are supported as a single URL encoded argument, as seen in the examples.
+Any parameters should be passed as an optional `params` object as seen in the examples.
 
 ### [.getCities(params)](https://docs.openaq.org/#api-Cities)
 - example:
@@ -21,7 +21,7 @@ cities().then(results => {
 })
 
 //with optional parameters
-cities('country=US&page=2').then(results => {
+cities({country:'US', page:2}).then(results => {
   //results here
 })
 ```
@@ -34,7 +34,7 @@ countries().then(results => {
 })
 
 //with optional parameters
-countries('limit=10&page=2').then(results => {
+countries({limit:10, page:2}).then(results => {
   //results here
 })
 ```
@@ -46,7 +46,7 @@ fetches().then(results = {
 })
 
 //with optional parameters
-fetches('limit=10&page=2').then(results => {
+fetches({limit:10, page:2}).then(results => {
   //results here
 })
 ```
@@ -59,7 +59,7 @@ latest().then(results => {
 })
 
 //with optional parameters
-latest('location=Bowling%20Green&parameter=o3').then(results => {
+latest({location:'Bowling Green', parameter:'o3'}).then(results => {
   //results here
 })
 ```
@@ -72,7 +72,7 @@ locations().then(results => {
 })
 
 //with optional parameters
-locations('location=Bowling%20Green&parameter=o3').then(results => {
+locations({location:'Bowling Green', parameter:'o3'}).then(results => {
   //results here
 })
 ```
@@ -85,7 +85,7 @@ measurements().then(results => {
 })
 
 //with optional parameters
-measurements('location=Bowling%20Green&parameter=o3').then(results => {
+measurements({location:'Bowling Green', parameter:'o3'}).then(results => {
   //results here
 })
 ```
@@ -107,11 +107,10 @@ sources().then(results => {
 })
 
 //with optional parameters
-sources('limit=10&page=2').then(results => {
+sources({limit:10, page:2}).then(results => {
   //results here
 })
 ```
 ## TODO
 - add testing
-- improved `params` handling
 - make isomorphic (commonJS and ES2015 module support)
