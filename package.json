@@ -1,6 +1,6 @@
 {
   "name": "openaq",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A JS client for the OpenAQ API",
   "main": "index.js",
   "scripts": {
